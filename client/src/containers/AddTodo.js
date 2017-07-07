@@ -12,7 +12,7 @@ let getAddress = (dispatch, input) => {
   let url = 'http://api.zipaddress.net/?zipcode=' + input.value;
   asyncAddressApi(url).then(function onFulfilled(value){
     let { code, data } = JSON.parse(value)
-    if (code === '200') {
+    if (code === 200) {
       dispatch(addTodo(data.fullAddress))
       input.value = ''
     }
