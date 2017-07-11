@@ -9,7 +9,8 @@ let getAddress = (dispatch, input) => {
     return false
   }
 
-  let url = 'http://api.zipaddress.net/?zipcode=' + input.value;
+  // let url = 'http://api.zipaddress.net/?zipcode=' + input.value;
+  let url = 'http://localhost:3000/users'
   asyncAddressApi(url).then(function onFulfilled(value){
     let { code, data } = JSON.parse(value)
     if (code === 200) {

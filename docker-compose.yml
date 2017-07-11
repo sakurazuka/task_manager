@@ -12,3 +12,5 @@ services:
       - "4000:4000"
     depends_on:
       - task_manager_db
+    tty: true
+    stdin_open: true
